@@ -1,0 +1,40 @@
+
+
+
+@mixin logo($logo) {
+    width:400px;
+    height:190px;
+    background:url($logo) no-repeat 0 50px;
+    float:left;
+    display:block;
+    margin:0;
+}
+
+@mixin nav {
+    width: 540px;
+    height: 190px;
+    float: left;
+    text-align: right;
+}
+
+@mixin header {
+    width: inherit;
+    text-align: center;
+    padding-top: 40px;
+    clear: both;
+}
+
+@mixin footer {
+    width: 100%;
+    height: 120px;
+    background: $footer;
+    text-align: center;
+    color: $white;
+    padding-top: 50px;
+}
+
+@mixin break($length) {
+    @media screen and (max-width: $length) {
+        @content;
+    }
+}

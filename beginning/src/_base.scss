@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+
+body {
+    font-family: $font, sans-serif;
+    font-size: 1em;
+    line-height: 2em;
+    margin: 0;
+    background: url($bg) #fff repeat-x;
+}
+
+main {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+    @include break(959px) {
+        width: 768px;
+    }
+    @include break(767px) {
+        width: 460px;
+    }
+    @include break(459px) {
+        width: 300px;
+    }    
+}
+
+
+
+header {
+    @include header;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    h1 {
+        color: $orange;
+        font-weight: 100;
+        font-size: 4em;
+        line-height: 0;
+    }
+    h2 {
+        color: $white;
+        font-weight: 900;
+        font-size: 2.5em;
+        line-height: 0;
+        margin-bottom: 70px;
+    }
+    h3 {
+        color: $gray;
+        font-weight: 400;
+        font-size: 2em;
+        line-height: 0;
+        margin-bottom: 50px;
+    }
+    @include break(959px) {
+        h1 {
+            font-size: 3em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+    }
+    @include break(767px) {
+        img {
+            margin-bottom: 100px;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1em;
+        }
+        h3 {
+            font-size: 1.5em;
+        }
+    }
+    @include break(459px) {
+        img {
+            margin-bottom: 80px;
+        }
+        h1:first-child {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.4em;
+        }
+        h3 {
+            color: $white;
+            font-size: 1em;
+        }
+    }
+}
+
+.greybar {
+    width: 100%;
+    height: 90px;
+    background: $greybar;
+    clear: both;
+    padding-top: 30px;
+    @include break(459px) {
+        display: none;
+    }
+}
+footer {
+    @include footer;
+    .social-media {
+        margin: 0 auto;
+        width: 165px;
+        div.one {
+            float: left;
+            margin-right: 5px;
+                a {
+                    background: url($socialMedia)0 0;
+                    display: block;
+                    width: 36px;
+                    height: 36px;
+                    text-indent: -9999px;
+                } 
+        }
+        div.two {
+            float: left;
+            margin-right: 5px;
+                a {
+                    background: url($socialMedia)-38px 0;
+                    display: block;
+                    width: 36px;
+                    height: 36px;
+                    text-indent: -9999px;
+                } 
+   
+        }
+        div.three {
+            float: left;
+            margin-right: 5px;
+                a {
+                    background: url($socialMedia)-76px 0;
+                    display: block;
+                    width: 36px;
+                    height: 36px;
+                    text-indent: -9999px;
+                } 
+   
+        }
+        div.four {
+            float: left;
+            margin-right: 5px;
+                a {
+                    background: url($socialMedia)-114px 0;
+                    display: block;
+                    width: 36px;
+                    height: 36px;
+                    text-indent: -9999px;
+                } 
+   
+        }
+        
+    }
+    @include break(459px) {
+        text-align: center;
+        img {
+            float:none;
+            margin: 0;
+        }
+    }
+
+}
